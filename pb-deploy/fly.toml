@@ -1,0 +1,14 @@
+app = "campus-pb"
+primary_region = "hkg"  # 香港节点，中国访问延迟低
+
+[build]
+  dockerfile = "pb-deploy/Dockerfile"
+
+[env]
+  PORT = "8080"
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = false  # 保持运行，避免冷启动
+  min_machines_running = 1
