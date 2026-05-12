@@ -4,7 +4,6 @@ import { createServerClient } from "@/lib/pocketbase/server";
 import { formatPriceYuan } from "@/lib/utils";
 import { redirect } from "next/navigation";
 
-export const runtime = "edge";
 
 export default async function MyProductsPage() {
   const user = await getAuthUser();

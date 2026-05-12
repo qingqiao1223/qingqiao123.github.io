@@ -4,7 +4,6 @@ import { createServerClient } from "@/lib/pocketbase/server";
 import type { ProductCategory } from "@/lib/constants";
 import { notFound, redirect } from "next/navigation";
 
-export const runtime = "edge";
 
 type Params = Promise<{ id: string }>;
 

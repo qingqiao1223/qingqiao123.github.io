@@ -4,7 +4,6 @@ import { requireAdmin } from "@/lib/admin";
 import { createServerClient } from "@/lib/pocketbase/server";
 import { formatPriceYuan } from "@/lib/utils";
 
-export const runtime = "edge";
 
 type SearchParams = Promise<{ page?: string }>;
 const PAGE_SIZE = 20;

@@ -7,7 +7,6 @@ import { createServerClient } from "@/lib/pocketbase/server";
 import { getAuthUser, getProfile } from "@/lib/auth";
 import { formatPriceYuan } from "@/lib/utils";
 
-export const runtime = "edge";
 
 type Params = Promise<{ id: string }>;
 

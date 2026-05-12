@@ -5,7 +5,6 @@ import { createServerClient } from "@/lib/pocketbase/server";
 import type { ProductWithCover } from "@/types/product";
 import type { ProductCategory } from "@/lib/constants";
 
-export const runtime = "edge";
 
 const PAGE_SIZE = 12;
 

@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { getProfile } from "@/lib/auth";
 import { redirect } from "next/navigation";
-export const runtime = "edge";
 
 export default async function MePage() {
   const profile = await getProfile();

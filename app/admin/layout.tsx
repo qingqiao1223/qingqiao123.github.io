@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { requireAdmin } from "@/lib/admin";
 
-export const runtime = "edge";
 
 export default async function AdminLayout({
   children,

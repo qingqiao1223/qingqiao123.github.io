@@ -2,7 +2,6 @@ import Link from "next/link";
 import { requireAdmin } from "@/lib/admin";
 import { createServerClient } from "@/lib/pocketbase/server";
 
-export const runtime = "edge";
 
 export default async function AdminHomePage() {
   await requireAdmin();
