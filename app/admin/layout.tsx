@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { requireAdmin } from "@/lib/admin";
 
-export const dynamic = "force-dynamic";
+export const runtime = "edge";
 
 export default async function AdminLayout({
   children,

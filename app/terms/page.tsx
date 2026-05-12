@@ -1,3 +1,4 @@
+export const runtime = "edge";
 export default function TermsPage() {
   return (
     <main className="mx-auto max-w-3xl px-4 py-10 text-sm leading-relaxed text-slate-700">

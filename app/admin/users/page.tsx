@@ -3,7 +3,7 @@ import { requireAdmin } from "@/lib/admin";
 import { createServerClient } from "@/lib/pocketbase/server";
 import { getProfile } from "@/lib/auth";
 
-export const dynamic = "force-dynamic";
+export const runtime = "edge";
 
 export default async function AdminUsersPage() {
   await requireAdmin();

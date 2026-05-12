@@ -4,7 +4,7 @@ import { createServerClient } from "@/lib/pocketbase/server";
 import type { ProductCategory } from "@/lib/constants";
 import type { ProductWithCover } from "@/types/product";
 
-export const dynamic = "force-dynamic";
+export const runtime = "edge";
 
 function getCoverUrl(
   pb: Awaited<ReturnType<typeof createServerClient>>,

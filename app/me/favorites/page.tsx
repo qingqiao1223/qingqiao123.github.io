@@ -6,7 +6,7 @@ import type { ProductCategory } from "@/lib/constants";
 import type { ProductWithCover } from "@/types/product";
 import { redirect } from "next/navigation";
 
-export const dynamic = "force-dynamic";
+export const runtime = "edge";
 
 export default async function MyFavoritesPage() {
   const user = await getAuthUser();

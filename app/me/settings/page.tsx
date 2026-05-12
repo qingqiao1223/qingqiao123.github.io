@@ -1,6 +1,7 @@
 import { ProfileSettingsForm } from "@/components/ProfileSettingsForm";
 import { getProfile } from "@/lib/auth";
 import { redirect } from "next/navigation";
+export const runtime = "edge";
 
 export default async function SettingsPage() {
   const profile = await getProfile();
