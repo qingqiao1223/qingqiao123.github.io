@@ -13,10 +13,14 @@ function needsAuth(pathname: string) {
 }
 
 export async function middleware(request: NextRequest) {
+  // Fast path: skip PocketBase call for non-protected routes
+  if (!needsAuth(request.nextUrl.pathname)) {
+    return NextResponse.next({ request });
+  }
+
+  // Only check auth for protected routes
   const pbUrl = process.env.NEXT_PUBLIC_PB_URL || "http://127.0.0.1:8090";
   const pb = new PocketBase(pbUrl);
-
-  // Load auth from request cookies
   const allCookies = request.cookies.getAll();
   const cookieStr = allCookies.map((c) => `${c.name}=${c.value}`).join("; ");
   pb.authStore.loadFromCookie(cookieStr);
@@ -29,10 +33,6 @@ export async function middleware(request: NextRequest) {
     } catch {
       pb.authStore.clear();
     }
-  }
-
-  if (!needsAuth(request.nextUrl.pathname)) {
-    return NextResponse.next({ request });
   }
 
   if (!isAuthed) {

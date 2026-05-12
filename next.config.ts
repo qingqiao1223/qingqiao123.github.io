@@ -11,7 +11,7 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: "https",
-        hostname: "*.fly.dev",
+        hostname: "**",
         pathname: "/api/files/**",
       },
     ],
