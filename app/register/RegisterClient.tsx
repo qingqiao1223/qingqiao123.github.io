@@ -31,6 +31,7 @@ export default function RegisterClient() {
         nickname: nickname.trim() || undefined,
       });
       await pb.collection("users").authWithPassword(email.trim(), password);
+      document.cookie = pb.authStore.exportToCookie({ httpOnly: false });
       router.refresh();
       router.push("/products");
     } catch (err: unknown) {

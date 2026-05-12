@@ -21,6 +21,7 @@ export default function LoginClient() {
     try {
       const pb = createClient();
       await pb.collection("users").authWithPassword(email.trim(), password);
+      document.cookie = pb.authStore.exportToCookie({ httpOnly: false });
       router.refresh();
       router.push(next);
     } catch (err: unknown) {
