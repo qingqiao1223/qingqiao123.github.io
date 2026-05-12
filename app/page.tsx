@@ -14,7 +14,7 @@ export default function HomePage() {
       }}
     >
       <h1 style={{ fontSize: "2rem", fontWeight: 700, color: "#0d9488", margin: 0 }}>
-        校园二手平台
+        欢迎来到校园二手平台
       </h1>
       <p style={{ marginTop: "1rem", color: "#64748b", maxWidth: "400px" }}>
         发布闲置、浏览商品。请优先选择校内公共场所当面交易。
